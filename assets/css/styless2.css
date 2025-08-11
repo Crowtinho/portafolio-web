@@ -51,32 +51,11 @@ section {
 
 .btn-personalized {
   border-radius: 50rem; /* Bordes muy redondeados */
-  background-color: rgba(13, 110, 253, 0.1); /* Azul con opacidad del 10% */
+  background: rgba(13, 110, 253, 0.1); /* Azul con opacidad del 10% */
   color: #0080ff; /* Texto azul primario */
   border: 1px solid rgba(13, 110, 253, 0.25); /* Borde azul con 25% opacidad */
   
 }
-
-.btn-personalized3 {
-  border-radius: 50rem;
-  background: linear-gradient(135deg, #0080ff, #8000ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border: 1px solid rgba(13, 110, 253, 0.25);
-  transition: all 0.3s ease;
-}
-
-.btn-personalized3:hover {
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-color: #0080ff;
-  box-shadow: 0 0 20px #0d6dfd61;
-  /* box-shadow: 0 0 10px #0d6dfd61; */
-
-}
-
 
 .btn-personalized:hover {
   background-color: white;
@@ -87,7 +66,7 @@ section {
 
 .btn-personalized2 {
   border-radius: 50rem; /* Bordes muy redondeados */
-  background-color: white; /* Azul con opacidad del 10% */
+  background: white; /* Azul con opacidad del 10% */
   color: #0080ff; /* Texto azul primario */
   border: 1px solid rgba(13, 110, 253, 0.25); /* Borde azul con 25% opacidad */
   
@@ -96,6 +75,18 @@ section {
   background-color: rgba(13, 110, 253, 0.1); /* Azul con opacidad del 10% */
   color: #0080ff; /* Texto blanco */
   border-color: #0d6efd; /* Borde azul sólido */
+}
+.btn-personalized3 {
+  border-radius: 50rem; /* Bordes muy redondeados */
+  background: linear-gradient(135deg, #0080ff, #8000ff);  
+  color: white; /* Texto blanco */
+  border: 1px solid rgba(13, 110, 253, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-personalized3:hover {
+  transform: scale(1.05); /* Crece un poquito */
+  color: white; /* Mantener texto blanco */
 }
 /* ================================================================================ */
 
