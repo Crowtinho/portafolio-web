@@ -23,7 +23,7 @@ function loadTemplate(id, url, callback) {
 }
 
 loadTemplate("navbar", "components/navbar.html");
-loadTemplate("hero", "components/heroV2.html");
+loadTemplate("hero", "components/hero.html");
 loadTemplate("about", "components/about.html");
 loadTemplate("projects", "components/projects.html");
 loadTemplate("skills", "components/skills.html");
@@ -31,19 +31,3 @@ loadTemplate("experience", "components/experience.html");
 loadTemplate("contact", "components/contact.html");
 loadTemplate("footer", "components/footer.html");
 
-
-// // Cargar navbar y luego agregar un listener
-// loadTemplate("navbar", "components/navbar.html", (el) => {
-//     console.log("Navbar cargado:", el);
-
-//     // Ejemplo: agregar evento al botón "contacto"
-//     const btnContacto = el.querySelector("#btnContacto");
-//     if (btnContacto) {
-//         btnContacto.addEventListener("click", () => {
-//             alert("Hiciste clic en Contacto");
-//         });
-//     }
-// });
-
-// // Cargar footer sin callback
-// loadTemplate("footer", "components/footer.html");
