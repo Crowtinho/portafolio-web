@@ -1,0 +1,444 @@
+section {
+  scroll-margin-top: 40px;
+}
+
+/* ================================================================================ */
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.152); 
+}
+.navbar-nav .nav-link {
+  position: relative; /* Necesario para la línea */
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  /* color: linear-gradient(135deg, #0080ff, #8000ff); */
+  color: #6600ff;
+}
+
+/* Línea animada debajo */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Alineada al texto */
+  width: 0%;
+  height: 2px;
+  background-color: #6600ff;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* ================================================================================ */
+
+.gradient-text {
+  background: linear-gradient(135deg, #0080ff, #8000ff);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-bag {
+  background: linear-gradient(135deg, #0080ff, #8000ff);  
+}
+.gradient-btn {
+  background: linear-gradient(135deg, #0080ff, #8000ff);  
+  border-radius: 1rem ;
+}
+
+/* ================================================================================ */
+
+.btn-personalized {
+  border-radius: 50rem; /* Bordes muy redondeados */
+  background: rgba(13, 110, 253, 0.1); /* Azul con opacidad del 10% */
+  color: #0080ff; /* Texto azul primario */
+  border: 1px solid rgba(13, 110, 253, 0.25); /* Borde azul con 25% opacidad */
+}
+
+.btn-personalized:hover {
+  background-color: white;
+  /* background: linear-gradient(135deg, #0080ff, #8000ff); */
+  color: #0080ff; /* Texto blanco */
+  border-color: #0080ff; /* Borde azul sólido */
+}
+
+.btn-personalized2 {
+  border-radius: 50rem; /* Bordes muy redondeados */
+  background: white; /* Azul con opacidad del 10% */
+  color: #0080ff; /* Texto azul primario */
+  border: 1px solid rgba(13, 110, 253, 0.25); /* Borde azul con 25% opacidad */
+}
+.btn-personalized2:hover {
+  background-color: rgba(13, 110, 253, 0.1); /* Azul con opacidad del 10% */
+  color: #0080ff; /* Texto blanco */
+  border-color: #0d6efd; /* Borde azul sólido */
+}
+
+.btn-personalized3 {
+  border-radius: 50rem; /* Bordes muy redondeados */
+  background: linear-gradient(135deg, #0080ff, #8000ff);  
+  color: white; /* Texto blanco */
+  border: 1px solid rgba(13, 110, 253, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-personalized3:hover {
+  transform: scale(1.05); /* Crece un poquito */
+  color: white; /* Mantener texto blanco */
+}
+
+/* ================================================================================ */
+
+.profile-picture {
+  box-shadow: 5px 5px 50px #0d6dfd61;
+  /* background: linear-gradient(135deg, rgba(0, 102, 255, 0.05), rgba(102, 0, 255, 0.05)) */
+}
+
+/* ================================================================================ */
+
+.card-hover-shadow {
+  border-radius:1rem 1rem 1rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* sombra leve por defecto */
+  transition: box-shadow 0.3s ease;
+}
+
+.card-hover-shadow:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* sombra más intensa al hover */
+}
+
+.card-hover-shadow .position-relative {
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden; /* Solo aquí para recortar imagen, no en la card */
+}
+
+.card-hover-shadow .card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card-hover-shadow:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+/* ================================================================================ */
+/* =============================
+   MODO OSCURO
+============================= */
+body.dark-mode {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+/* Navbar */
+body.dark-mode .navbar {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode .navbar-nav .nav-link {
+  color: #f8f9fa !important;
+}
+
+body.dark-mode .navbar-nav .nav-link:hover {
+  color: #9b7dff !important; /* tono morado claro */
+}
+
+body.dark-mode .navbar-nav .nav-link::after {
+  background-color: #9b7dff;
+}
+
+/* Secciones */
+body.dark-mode section {
+  background-color: transparent; /* Mantener continuidad */
+  color: #f8f9fa;
+}
+
+/* Cards */
+body.dark-mode .card-hover-shadow {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
+  border-color: #333;
+}
+
+body.dark-mode .card-hover-shadow:hover {
+  box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+}
+
+/* Botones personalizados */
+body.dark-mode .btn-personalized {
+  background: rgba(155, 125, 255, 0.1);
+  color: #9b7dff;
+  border-color: rgba(155, 125, 255, 0.25);
+}
+body.dark-mode .btn-personalized:hover {
+  background-color: #1f1f1f;
+  border-color: #9b7dff;
+}
+
+body.dark-mode .btn-personalized2 {
+  background: #1f1f1f;
+  color: #9b7dff;
+  border-color: rgba(155, 125, 255, 0.25);
+}
+body.dark-mode .btn-personalized2:hover {
+  background-color: rgba(155, 125, 255, 0.1);
+}
+
+body.dark-mode .btn-personalized3 {
+  background: linear-gradient(135deg, #7a5cff, #9b7dff);
+  color: white;
+}
+body.dark-mode .btn-personalized3:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen de perfil */
+body.dark-mode .profile-picture {
+  box-shadow: 5px 5px 50px rgba(155, 125, 255, 0.4);
+}
+
+/* Texto con degradado */
+body.dark-mode .gradient-text {
+  background: linear-gradient(135deg, #7a5cff, #9b7dff);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Modo oscuro: sobrescribir Bootstrap */
+body.dark-mode .bg-light {
+  background-color: #121212 !important;
+}
+
+body.dark-mode .bg-secondary {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+body.dark-mode .text-muted {
+  color: #aaa !important;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e !important;
+  color: #fff !important;
+  border-color: #333 !important;
+}
+
+body.dark-mode .card .text-muted {
+  color: #bbb !important;
+}
+
+/* ===== Modo oscuro para sección Proyectos ===== */
+body.dark-mode #projects {
+  background-color: #121212; /* Fondo global de la sección */
+}
+
+body.dark-mode #projects .card {
+  background-color: #1e1e1e !important;
+  border: 1px solid #333 !important;
+  color: #fff;
+}
+
+body.dark-mode #projects .card .card-title {
+  color: #fff;
+}
+
+body.dark-mode #projects .card .card-text,
+body.dark-mode #projects .text-muted {
+  color: #aaa !important;
+}
+
+body.dark-mode #projects .badge.bg-light {
+  background-color: #333 !important;
+  color: #fff !important;
+  border-color: #555 !important;
+}
+
+/* Botones personalizados */
+body.dark-mode #projects .btn-personalized {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode #projects .btn-personalized2 {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* Botones en modo oscuro */
+body.dark-mode #projects .btn-personalized {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode #projects .btn-personalized:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode #projects .btn-personalized2 {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode #projects .btn-personalized2:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* ===========skills===================== */
+
+
+/* Fondo general en modo oscuro */
+body.dark-mode #skills {
+  background-color: #121212; /* Fondo general */
+  color: #f1f1f1;
+}
+
+/* Títulos y párrafos */
+body.dark-mode #skills h2,
+body.dark-mode #skills h3,
+body.dark-mode #skills h5,
+body.dark-mode #skills p,
+body.dark-mode #skills span {
+  color: #f1f1f1 !important;
+}
+
+/* Cards en modo oscuro */
+body.dark-mode #skills .card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: #f1f1f1;
+}
+
+body.dark-mode #skills .card-hover-shadow:hover {
+  background-color: #2a2a2a;
+}
+
+/* Texto muted en modo oscuro */
+body.dark-mode #skills .text-muted {
+  color: #aaa !important;
+}
+
+/* Barras de progreso */
+body.dark-mode #skills .progress {
+  background-color: #333;
+}
+
+/* Badges en modo oscuro */
+body.dark-mode #skills .badge {
+  background-color: transparent;
+  border-color: #888;
+  color: #f1f1f1 !important;
+}
+
+/* ============contact===================== */
+
+/* ===================== CONTACT - Dark Mode ===================== */
+body.dark-mode #contact {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Títulos, párrafos y enlaces */
+body.dark-mode #contact h2,
+body.dark-mode #contact h5,
+body.dark-mode #contact h6,
+body.dark-mode #contact p,
+body.dark-mode #contact label,
+body.dark-mode #contact span,
+body.dark-mode #contact a {
+  color: #f1f1f1 !important;
+}
+
+/* Texto muted en dark mode */
+body.dark-mode #contact .text-muted {
+  color: #aaa !important;
+}
+
+/* Cards en dark mode */
+body.dark-mode #contact .card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+
+/* Hover de cards */
+body.dark-mode #contact .card-hover-shadow:hover {
+  background-color: #2a2a2a;
+}
+
+/* Botones personalizados en dark mode */
+body.dark-mode #contact .btn-personalized2 {
+  background-color: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #f1f1f1;
+}
+body.dark-mode #contact .btn-personalized2:hover {
+  background-color: rgba(255,255,255,0.1);
+  color: #f1f1f1;
+}
+
+/* Botón outline-primary en dark mode */
+body.dark-mode #contact .btn-outline-primary {
+  color: #66aaff;
+  border-color: #66aaff;
+}
+body.dark-mode #contact .btn-outline-primary:hover {
+  background-color: #66aaff;
+  color: #121212;
+}
+
+/* Inputs y textarea en dark mode */
+body.dark-mode #contact .form-control {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  color: #f1f1f1;
+}
+body.dark-mode #contact .form-control:focus {
+  background-color: #262626;
+  border-color: #66aaff;
+  color: #f1f1f1;
+  box-shadow: 0 0 0 0.25rem rgba(102,170,255,0.25);
+}
+
+/* Íconos en dark mode */
+body.dark-mode #contact .contact-icon i {
+  color: #66aaff;
+}
+
+/* ======================== */
+
+/* ===== Placeholders y autofill en modo oscuro (CONTACT) ===== */
+body.dark-mode #contact .form-control::placeholder {
+  color: #bfbfbf;     /* color visible sobre fondo oscuro */
+  opacity: 1;         /* algunos navegadores aplican opacidad por defecto */
+}
+
+/* Compatibilidad con prefijos antiguos */
+body.dark-mode #contact .form-control::-webkit-input-placeholder { color: #bfbfbf; opacity:1; }
+body.dark-mode #contact .form-control:-ms-input-placeholder { color: #bfbfbf; opacity:1; }
+body.dark-mode #contact .form-control::-ms-input-placeholder { color: #bfbfbf; opacity:1; }
+
+/* Asegurar placeholders también para textarea */
+body.dark-mode #contact textarea.form-control::placeholder { color: #bfbfbf; opacity:1; }
+body.dark-mode #contact textarea.form-control::-webkit-input-placeholder { color: #bfbfbf; opacity:1; }
+
+/* ===== Chrome / WebKit autofill =====
+   Evita el fondo amarillo verdoso por defecto y fuerza colores oscuros consistentes */
+body.dark-mode input:-webkit-autofill,
+body.dark-mode textarea:-webkit-autofill,
+body.dark-mode select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #1e1e1e inset !important;
+  box-shadow: 0 0 0px 1000px #1e1e1e inset !important;
+  -webkit-text-fill-color: #f1f1f1 !important;
+}
+
+/* Opcional: transición suave para placeholders */
+body.dark-mode #contact .form-control {
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}

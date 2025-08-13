@@ -1,0 +1,313 @@
+/* ====== Secciones ====== */
+section {
+  scroll-margin-top: 40px;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.152);
+}
+
+/* Links de navbar y su línea animada */
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #6600ff;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6600ff;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* ====== Gradientes ====== */
+.gradient-text,
+.gradient-bag,
+.gradient-btn {
+  background: linear-gradient(135deg, #0080ff, #8000ff);
+}
+
+.gradient-text {
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-btn {
+  border-radius: 1rem;
+}
+
+/* ====== Botones personalizados ====== */
+.btn-personalized,
+.btn-personalized2,
+.btn-personalized3 {
+  border-radius: 50rem;
+  border: 1px solid rgba(13, 110, 253, 0.25);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-personalized {
+  background: rgba(13, 110, 253, 0.1);
+  color: #0080ff;
+}
+
+.btn-personalized:hover {
+  background-color: white;
+  color: #0080ff;
+  border-color: #0080ff;
+}
+
+.btn-personalized2 {
+  background: white;
+  color: #0080ff;
+}
+
+.btn-personalized2:hover {
+  background-color: rgba(13, 110, 253, 0.1);
+  border-color: #0d6efd;
+}
+
+.btn-personalized3 {
+  background: linear-gradient(135deg, #0080ff, #8000ff);
+  color: white;
+}
+
+.btn-personalized3:hover {
+  transform: scale(1.05);
+  color: white;
+}
+
+/* ====== Perfil ====== */
+.profile-picture {
+  box-shadow: 5px 5px 50px #0d6dfd61;
+}
+
+/* ====== Cards con sombra hover ====== */
+.card-hover-shadow {
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-hover-shadow:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.card-hover-shadow .position-relative {
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+
+.card-hover-shadow .card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card-hover-shadow:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+/* ====== Modo oscuro ====== */
+body.dark-mode {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+/* Navbar modo oscuro */
+body.dark-mode .navbar {
+  background-color: #1f1f1f !important;
+}
+body.dark-mode .navbar-nav .nav-link {
+  color: #f8f9fa !important;
+  transition: color 0.3s ease;
+}
+body.dark-mode .navbar-nav .nav-link:hover {
+  color: #9b7dff !important;
+}
+body.dark-mode .navbar-nav .nav-link::after {
+  background-color: #9b7dff;
+}
+
+/* Secciones modo oscuro */
+body.dark-mode section {
+  background-color: transparent;
+  color: #f8f9fa;
+}
+
+/* Cards modo oscuro */
+body.dark-mode .card-hover-shadow,
+body.dark-mode .card,
+body.dark-mode #projects .card,
+body.dark-mode #skills .card,
+body.dark-mode #contact .card {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+  color: #f8f9fa !important;
+}
+
+body.dark-mode .card-hover-shadow:hover,
+body.dark-mode #skills .card-hover-shadow:hover,
+body.dark-mode #contact .card-hover-shadow:hover {
+  background-color: #2a2a2a;
+  box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+}
+
+/* Textos muted en modo oscuro */
+body.dark-mode .text-muted,
+body.dark-mode #projects .text-muted,
+body.dark-mode #skills .text-muted,
+body.dark-mode #contact .text-muted {
+  color: #aaa !important;
+}
+
+/* Botones personalizados modo oscuro */
+body.dark-mode .btn-personalized {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+body.dark-mode .btn-personalized:hover {
+  background-color: #333;
+}
+
+body.dark-mode .btn-personalized2 {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #555;
+}
+body.dark-mode .btn-personalized2:hover {
+  background-color: #222;
+}
+
+/* Perfil modo oscuro */
+body.dark-mode .profile-picture {
+  box-shadow: 5px 5px 50px rgba(155, 125, 255, 0.748);
+}
+
+/* Sobrescribir Bootstrap para modo oscuro */
+body.dark-mode .bg-light {
+  background-color: #121212 !important;
+}
+body.dark-mode .bg-secondary {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+body.dark-mode .card .text-muted {
+  color: #bbb !important;
+}
+
+/* Sección projects modo oscuro */
+body.dark-mode #projects {
+  background-color: #121212;
+}
+body.dark-mode #projects .card-title {
+  color: #fff;
+}
+body.dark-mode #projects .badge.bg-light {
+  background-color: #333 !important;
+  color: #fff !important;
+  border-color: #555 !important;
+}
+
+/* Sección skills modo oscuro */
+body.dark-mode #skills {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+body.dark-mode #skills h2,
+body.dark-mode #skills h3,
+body.dark-mode #skills h5,
+body.dark-mode #skills p,
+body.dark-mode #skills span {
+  color: #f1f1f1 !important;
+}
+body.dark-mode #skills .badge {
+  background-color: transparent;
+  border-color: #888;
+  color: #f1f1f1 !important;
+}
+body.dark-mode #skills .progress {
+  background-color: #333;
+}
+
+/* Sección contact modo oscuro */
+body.dark-mode #contact {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+body.dark-mode #contact h2,
+body.dark-mode #contact h5,
+body.dark-mode #contact h6,
+body.dark-mode #contact p,
+body.dark-mode #contact label,
+body.dark-mode #contact span,
+body.dark-mode #contact a {
+  color: #f1f1f1 !important;
+}
+body.dark-mode #contact .btn-personalized2 {
+  background-color: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #f1f1f1;
+}
+body.dark-mode #contact .btn-personalized2:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Botón outline-primary modo oscuro en contact */
+body.dark-mode #contact .btn-outline-primary {
+  color: #66aaff;
+  border-color: #66aaff;
+}
+body.dark-mode #contact .btn-outline-primary:hover {
+  background-color: #66aaff;
+  color: #121212;
+}
+
+/* Inputs y textarea modo oscuro en contact */
+body.dark-mode #contact .form-control {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  color: #f1f1f1;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+body.dark-mode #contact .form-control:focus {
+  background-color: #262626;
+  border-color: #66aaff;
+  box-shadow: 0 0 0 0.25rem rgba(102,170,255,0.25);
+}
+
+/* Placeholder modo oscuro */
+body.dark-mode #contact .form-control::placeholder,
+body.dark-mode #contact .form-control::-webkit-input-placeholder,
+body.dark-mode #contact .form-control:-ms-input-placeholder,
+body.dark-mode #contact .form-control::-ms-input-placeholder,
+body.dark-mode #contact textarea.form-control::placeholder,
+body.dark-mode #contact textarea.form-control::-webkit-input-placeholder {
+  color: #fffefe;
+  opacity: 1;
+}
+
+/* Autofill chrome modo oscuro */
+body.dark-mode input:-webkit-autofill,
+body.dark-mode textarea:-webkit-autofill,
+body.dark-mode select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #1e1e1e inset !important;
+  box-shadow: 0 0 0px 1000px #1e1e1e inset !important;
+  -webkit-text-fill-color: #f1f1f1 !important;
+}
+
+/* Íconos contact modo oscuro */
+body.dark-mode #contact .contact-icon i {
+  color: #66aaff;
+}
