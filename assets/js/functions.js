@@ -3,7 +3,7 @@ function scrollToSection(selector) {
     if (element) {
         element.scrollIntoView({ 
             behavior: 'smooth',
-            block: 'start'  // <-- esta línea adicional
+            block: 'start'  
         });
     }
 }
