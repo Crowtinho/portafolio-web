@@ -131,13 +131,29 @@ section {
   overflow: hidden;
 }
 
-.card-hover-shadow .card-img-top {
+.card-hover-shadow  {
   transition: transform 0.3s ease;
 }
 
-.card-hover-shadow:hover .card-img-top {
-  transform: scale(1.1);
+.card-hover-shadow:hover  {
+  transform: scale(1.03);
 }
+
+
+.card-body .bi{
+  font-size: 20px;
+}
+
+.estadistica {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.estadistica:hover,
+.estadistica:focus-visible {
+  transform: scale(1.5); /* ajustar el porcentaje de zoom aquí */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
 
 /* ====== Modo oscuro ====== */
 body.dark-mode {
@@ -209,9 +225,10 @@ body.dark-mode .btn-personalized2 {
   color: #fff;
   border: 1px solid #555;
 }
-body.dark-mode .btn-personalized2:hover {
+
+/* body.dark-mode .btn-personalized2:hover {
   background-color: #222;
-}
+} */
 
 /* Perfil modo oscuro */
 body.dark-mode .profile-picture {
