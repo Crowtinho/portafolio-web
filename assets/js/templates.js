@@ -29,7 +29,12 @@ loadTemplate("navbar", "components/navbar.html", () => {
     const icon = toggleBtn.querySelector("i");
 
     // Activar modo oscuro si estaba guardado
-    if (localStorage.getItem("dark-mode") === "enabled") {
+    // if (localStorage.getItem("dark-mode") === "enabled") {
+    //     document.body.classList.add("dark-mode");
+    //     icon.classList.replace("bi-moon", "bi-sun");
+    // }
+    const darkPref = localStorage.getItem("dark-mode"); 
+    if (darkPref === "enabled" || darkPref === null) { 
         document.body.classList.add("dark-mode");
         icon.classList.replace("bi-moon", "bi-sun");
     }
